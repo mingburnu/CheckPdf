@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MarsCheckPdf.iml" filepath="$PROJECT_DIR$/.idea/modules/MarsCheckPdf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MarsCheckPdf/.idea/modules/MarsCheckPdf_main.iml" filepath="$PROJECT_DIR$/../MarsCheckPdf/.idea/modules/MarsCheckPdf_main.iml" group="MarsCheckPdf" />
+      <module fileurl="file://$PROJECT_DIR$/../MarsCheckPdf/.idea/modules/MarsCheckPdf_test.iml" filepath="$PROJECT_DIR$/../MarsCheckPdf/.idea/modules/MarsCheckPdf_test.iml" group="MarsCheckPdf" />
+    </modules>
+  </component>
+</project>
