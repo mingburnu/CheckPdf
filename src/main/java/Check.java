@@ -27,11 +27,11 @@ public class Check {
             //STEP 4: Execute a query
             System.out.println("Creating statement...");
             Statement stmt = conn.createStatement();
-            String sql = "SELECT title, fulltextUrl FROM article where fulltextUrl like 'http://mars.dl.libraryandbook.net%'";
+            String sql = prop.getProperty("sql");
             ResultSet rs = stmt.executeQuery(sql);
 
             File self = new File(Check.class.getProtectionDomain().getCodeSource().getLocation().getPath());
-            String path = "\\test.log";
+            String path = "\\error.log";
             File file = new File(self.getParentFile().getAbsolutePath() + path);
 
             // if file doesnt exists, then create it
@@ -53,7 +53,6 @@ public class Check {
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
                 connection.setConnectTimeout(Integer.MAX_VALUE);
-                connection.connect();
                 int statusCode = connection.getResponseCode();
 
                 if (statusCode != 200) {
@@ -72,6 +71,8 @@ public class Check {
                     bw.write(sepLine);
                     bw.newLine();
                 }
+
+                connection.disconnect();
             }
 
             bw.close();
